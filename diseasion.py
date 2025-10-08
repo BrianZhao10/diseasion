@@ -72,14 +72,14 @@ for disease, dossier in zip(labelStorage, linkStorage):
 
 correlation.commit()
 
-promptuser = input("What are some symptoms or causative factors that you suspect or know are present?" + "\n" + "(Please format your response as you would an English list, without the 'and', like this: Chest pain, Cough, Internal bleeing, Fatigue)")
+promptuser = input("What are some symptoms or causative factors that you suspect or know are present?" + "\n" + "Please format your response as you would an English list, without the 'and', like this: Chest pain, Cough, Internal bleeding, Fatigue")
 
 try:
     caret.execute('ALTER TABLE illnesses ADD COLUMN conditionalls TEXT')
     correlation.commit()
 
 except sqlite3.OperationalError:
-    print("Error caught. Please [consider (redeclaring && remedying the program) || checking that existing alterations are not recorded and executed again]{String column;}")
+    print("Error caught. Please consider redeclaring (modifying) or remedying (rerunning) the program.")
     time.sleep(1.1)
     print("\033[2J\033[H")
     pass
@@ -187,11 +187,11 @@ def diseader(inputVals):
 diseasions = diseader(promptuser)
 
 if diseasions:
-    print(f"Our diseasion has reached a conclusion; You may have one or more of the following diseases or illnesses!")
+    print(f"Our diseasion has reached a conclusion; you may have one or more of the following diseases or illnesses!")
     
     for disease in diseasions:
         print(disease)
-    print("Be sure to take great care of yourself and consult only with professional and qualified opinions. Diseasion is not such a tool and any superstitions caused by it are all absolute misconceptions on your behalf. Do not take this literally; it is something that helps you better understand diseases and illnesses alike!")
+    print("Be sure to take great care of yourself and consult only with professional and qualified opinions. This project is not such a tool and any superstitions caused by it are all absolute misconceptions on your behalf. Do not take this literally as it is something that helps both you and I better understand diseases and illnesses alike!")
     
 else:
-    print("No matching diseases found!" + "\n" "Diseasion is underconstruction to integrate non-spelling-sensitive attributes to the program most likely by using APIs!")
+    print("No matching diseases found!" + "\n" "diseasion is under construction to integrate non-spelling-sensitive attributes to the program most likely by using APIs!")
