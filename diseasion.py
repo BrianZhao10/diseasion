@@ -194,4 +194,4 @@ if diseasions:
     print("Be sure to take great care of yourself and consult only with professional and qualified opinions. This project is not such a tool and any superstitions caused by it are all absolute misconceptions on your behalf. Do not take this literally as it is something that helps both you and I better understand diseases and illnesses alike!")
     
 else:
-    print("No matching diseases found!" + "\n" "diseasion is under construction to integrate non-spelling-sensitive attributes to the program most likely by using APIs!")
+    print("No matching diseases found!" + "\n" "diseasion is under construction to integrate a non-spelling-sensitive prompt input to the program, most likely by using APIs!")
