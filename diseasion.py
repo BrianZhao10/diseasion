@@ -103,9 +103,6 @@ def diagnosis(linkformation):
 
         category = requests.get(causeffect)
         DATA = BeautifulSoup(category.content, "html.parser")
-        '''
-        aka Diseases Actively Triaged Accurately
-        '''
         
         alphabeticalink = None
         for curelation in DATA.find_all("a", href=True):
@@ -119,9 +116,6 @@ def diagnosis(linkformation):
 
             core = requests.get(alphabeticalink)
             DATA = BeautifulSoup(core.content, "html.parser")
-            '''
-            short for Diseases Actively Triaged Accurately
-            '''
 
             lastlinks = DATA.find_all("a", href=True)
             if len(lastlinks) >= 10:
