@@ -72,7 +72,7 @@ for disease, dossier in zip(labelStorage, linkStorage):
 
 correlation.commit()
 
-promptuser = input("What are some symptoms or causative factors that you suspect or know are present?" + "\n" + "Please format your response as you would an English list, without the 'and', like this: Chest pain, Cough, Internal bleeding, Fatigue")
+promptuser = input("What are some symptoms or causative factors that you suspect or know are present?" + "\n" + "Please format your response as you would an English list, without the 'and', like so: Chest pain, Cough, Internal bleeding, Fatigue")
 
 try:
     caret.execute('ALTER TABLE illnesses ADD COLUMN conditionalls TEXT')
